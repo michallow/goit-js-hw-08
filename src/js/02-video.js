@@ -16,6 +16,7 @@ player.on('timeupdate', (event) => {
 const savedTime = localStorage.getItem('videoplayer-current-time');
 if (savedTime) {
     player.setCurrentTime(parseFloat(savedTime));
+    console.log(savedTime);
 }
 
 player.on('play', () => {
