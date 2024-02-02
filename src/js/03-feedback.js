@@ -32,4 +32,3 @@ form.addEventListener('submit', function (event) {
     message: messageInput.value,
   });
 });
-///
