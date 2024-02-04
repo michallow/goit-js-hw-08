@@ -27,8 +27,16 @@ const loadThrottledInput = () => {
 
 loadThrottledInput();
 
+console.log('Email = ', emailInput.value);
+console.log('Message = ', messageInput.value);
+
 formInput.addEventListener('submit', event => {
   event.preventDefault();
+
+  if (emailInput.value.trim() === '' || messageInput.value.trim() === '') {
+    alert('Please fill in all the fields!');
+    return;
+  }
   localStorage.removeItem(storageKey);
   formInput.reset();
 });
